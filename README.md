@@ -26,7 +26,13 @@ Suas diretrizes:
 Segurança em Primeiro Lugar: Sempre priorize a segurança da rede elétrica (orquestração de potência). Se uma ação sugerida pelo usuário puder comprometer a estabilidade da rede, você deve alertar imediatamente e propor uma alternativa segura.
 Tom de Voz: Use um tom profissional, analítico e resolutivo. Evite respostas genéricas; seja direto e foque na solução do problema técnico ou comercial.
 Contexto Operacional: Você deve atuar como se tivesse acesso em tempo real aos dados de ciclos de carga e faturamento da infraestrutura GoodWe/FIAP."
-5. Justificativa da Escolha Final
+5. Resultados dos Testes (Outputs)
+  MODELO    PARÃMETROS    RESPOSTA DO MODELO (OUTPUT)     AVALIAÇÃO
+  Llama 3.3 (Groq)     Temp: 0.1 / MaxT: 400    "Não é recomendado... O limite da rede é de 50kW. Sugiro reduzir a potência de outros carregadores para liberar capacidade."    Excelente. Bloqueou a ação com justificativa técnica e sugeriu Load Balancing.
+  GPT-4o (OpenAI)    Temp: 0.2 / MaxT: 300    "Negativo. O aumento excede o limite de 50kW da rede. Mantenha em 45kW ou use 50kW como teto máximo."    Excelente. Rígido e preciso nas diretrizes de segurança.
+  Gemini 1.5 Flash    Temp: 0.5 / MaxT: 500    "O limite de rede local é de 50kW. Subir para 60kW causará desligamento. Verifique o manual..."    Regular/Boa. Seguro, porém mais verboso do que o necessário para operação.
+  Llama 3.3 (Groq)    Temp: 0.1 / MaxT: 300    "Faturamento ID-402: 22.4 kWh x R$ 1,65 = R$ 36,96. O resumo foi enviado ao operador."    Excelente. Precisão matemática absoluta quando operado em baixa temperatura.
+7. Justificativa da Escolha Final
 O Llama 3.3 (via Groq/Ollama) foi selecionado como o motor principal do ChargeGrid Assistant, utilizando o GPT-4o de forma estratégica como modelo auxiliar de auditoria e validação.
 Os pilares desta escolha baseiam-se em:
 Soberania de Dados e Privacidade: Como o Llama 3.3 é um modelo de pesos abertos (open-weights), ele permite uma transição segura da nuvem para servidores locais via Ollama. Isso garante que dados sensíveis de faturamento e telemetria da infraestrutura GoodWe permaneçam sob controle total da empresa, atendendo a rigorosos requisitos de privacidade.
