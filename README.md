@@ -57,7 +57,7 @@ O chatbot atuará estritamente dentro das fronteiras operacionais da infraestrut
 
 ## 3. Tecnologias Selecionadas e Justificativa
 
-* **LLMs para Teste:** OpenAI GPT-4o, Google Gemini 1.5 Flash e Llama 3.3 (Groq).
+* **LLMs para Teste:** OpenAI GPT-4o-mini, Google Gemini 1.5 Flash e Llama 3.3 (Groq).
 * **Justificativa:** Alta capacidade de raciocínio lógico para lidar com dados estruturados de energia e o uso do llama permite rodar modelos locais, garantindo privacidade e menor latência em operações críticas.
 * **Framework de Orquestração:** LangChain.
 * **Justificativa:** Facilita a implementação de RAG (Retrieval-Augmented Generation) para que o chatbot consulte manuais técnicos da GoodWe e logs de carga. E essencial para criar "Agentes" que conectam a IA às ferramentas de banco de dados e APIs de faturamento.
@@ -89,7 +89,7 @@ O chatbot atuará estritamente dentro das fronteiras operacionais da infraestrut
 | MODELO | PARÂMETROS | RESPOSTA DO MODELO (OUTPUT) | AVALIAÇÃO |
 | :--- | :--- | :--- | :--- |
 | **Llama 3.3 (Groq)** | Temp: 0.1 / MaxT: 400 | "Não é recomendado... O limite da rede é de 50kW. Sugiro reduzir a potência de outros carregadores para liberar capacidade." | Excelente. Bloqueou a ação com justificativa técnica e sugeriu Load Balancing. |
-| **GPT-4o (OpenAI)** | Temp: 0.2 / MaxT: 300 | "Negativo. O aumento excede o limite de 50kW da rede. Mantenha em 45kW ou use 50kW como teto máximo." | Excelente. Rígido e preciso nas diretrizes de segurança. |
+| **GPT-4o-mini (OpenAI)** | Temp: 0.2 / MaxT: 300 | "Negativo. O aumento excede o limite de 50kW da rede. Mantenha em 45kW ou use 50kW como teto máximo." | Excelente. Rígido e preciso nas diretrizes de segurança. |
 | **Gemini 1.5 Flash** | Temp: 0.5 / MaxT: 500 | "O limite de rede local é de 50kW. Subir para 60kW causará desligamento. Verifique o manual..." | Regular/Boa. Seguro, porém mais verboso do que o necessário para operação. |
 | **Llama 3.3 (Groq)** | Temp: 0.1 / MaxT: 300 | "Faturamento ID-402: 22.4 kWh x R$ 1,65 = R$ 36,96. O resumo foi enviado ao operador." | Excelente. Precisão matemática absoluta quando operado em baixa temperatura. |
 
@@ -97,7 +97,7 @@ O chatbot atuará estritamente dentro das fronteiras operacionais da infraestrut
 
 ## 7. Justificativa da Escolha Final
 
-O Llama 3.3 (via Groq/Ollama) foi selecionado como o motor principal do ChargeGrid Assistant, utilizando o GPT-4o de forma estratégica como modelo auxiliar de auditoria e validação.
+O Llama 3.3 (via Groq/Ollama) foi selecionado como o motor principal do ChargeGrid Assistant, utilizando o GPT-4o-mini de forma estratégica como modelo auxiliar de auditoria e validação.
 
 Os pilares desta escolha baseiam-se em:
 
