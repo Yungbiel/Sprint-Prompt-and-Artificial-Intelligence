@@ -4,7 +4,13 @@
 ## 1. Identificação do Projeto
 * **Projeto:** ChargeGrid Intelligence (EV Challenge 2026)
 * **Parceria:** GoodWe & FIAP
-* **Integrantes:** [Vinicius Molena - 571270]
+* **Integrantes:**
+  * [Vinicius Molena - 571270]
+  * [Ricardo Santos - 569600]
+  * [Gabrel Vilas - 57160]
+  * [Nathan Werner - 572925]
+  * [Matheus Ferreira - ]
+  * [Gustavo - ]
 
   
 --- 
