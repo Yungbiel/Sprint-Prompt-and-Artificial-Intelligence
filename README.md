@@ -10,7 +10,7 @@
   * [Gabrel Vilas - 57160]
   * [Nathan Werner - 572925]
   * [Matheus Ferreira - 569638]
-  * [Gustavo - ]
+  * [Gustavo Henrique -  569921]
 
   
 --- 
@@ -97,11 +97,10 @@ O chatbot atuará estritamente dentro das fronteiras operacionais da infraestrut
 
 ## 7. Justificativa da Escolha Final
 
-O Llama 3.3 (via Groq/Ollama) foi selecionado como o motor principal do ChargeGrid Assistant, utilizando o GPT-4o-mini de forma estratégica como modelo auxiliar de auditoria e validação.
+O Llama 3.3 (via Groq/Ollama) foi selecionado como o motor principal do ChargeGrid Assistant.
 
 Os pilares desta escolha baseiam-se em:
 
 * **Soberania de Dados e Privacidade:** Como o Llama 3.3 é um modelo de pesos abertos (open-weights), ele permite uma transição segura da nuvem para servidores locais via Ollama. Isso garante que dados sensíveis de faturamento e telemetria da infraestrutura GoodWe permaneceram sob controle total da empresa, atendendo a rigorosos requisitos de privacidade.
 * **Flexibilidade e Escalabilidade:** Durante a fase de desenvolvimento, o uso da infraestrutura Groq nos permite alcançar uma latência ultra-baixa, essencial para uma experiência de usuário fluida. Futuramente, essa mesma inteligência pode ser embarcada localmente sem a necessidade de reescrever o código base.
 * **Raciocínio Lógico de Segurança:** Nos testes de Orquestração de Potência, o Llama 3.3 demonstrou uma postura resolutiva e analítica, priorizando a integridade da rede elétrica e oferecendo alternativas técnicas viáveis, como o balanceamento de carga.
-* **Ciclo de Melhoria Contínua:** O GPT-4o será mantido como um benchmark de alta fidelidade. Ele servirá como "auxiliar de decisão" e validador de lógicas complexas, funcionando como a base de comparação para o futuro refinamento (fine-tuning) e otimização das respostas do Llama.
