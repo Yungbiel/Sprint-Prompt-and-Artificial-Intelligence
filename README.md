@@ -229,5 +229,4 @@ Para iterar, edite `SYSTEM_PROMPT` (seção 3 do notebook) e os parâmetros
 
 ---
 [video youtube](https://youtu.be/93cKDe5Jrvs)
-- Conexão a dados reais de ciclos de carga e faturamento (substituir a simulação por telemetria).
-- Migração opcional para execução local via Ollama (soberania de dados).
+
