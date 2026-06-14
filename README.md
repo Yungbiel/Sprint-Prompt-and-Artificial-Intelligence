@@ -221,14 +221,13 @@ Para iterar, edite `SYSTEM_PROMPT` (seção 3 do notebook) e os parâmetros
 
 ## 13. Estrutura do repositório
 ```
-.
-├── ChargeGrid_Assistant.ipynb   # Notebook principal (Colab) — Sprint 2
+├── Chargegrid Assistance - Fluxograma
+├── Models tests
+├── ChargeGrid_Assistant_SP02.ipynb  
 └── README.md                    # Este arquivo (Sprint 1 + Sprint 2)
 ```
 
 ---
-
-##  Roadmap (próximas sprints)
-- Integração com LangChain + RAG para consulta a manuais técnicos da GoodWe.
+[video youtube](https://youtu.be/93cKDe5Jrvs)
 - Conexão a dados reais de ciclos de carga e faturamento (substituir a simulação por telemetria).
 - Migração opcional para execução local via Ollama (soberania de dados).
